@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Responsive Navbar</title>
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">Qcorte<span>Analu!</span></a></div>
+      <ul class="links">
+        <li class="nav-item"><a href="Home">Home</a></li>
+        <li class="nav-item"><a href="About">About</a></li>
+        <li class="nav-item"><a href="Service">Service</a></li>
+        <li class="nav-item"><a href="Contact">Contact</a></li>
+      </ul>
+      <a href="a" class="action_btn">Get Started</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+ 
+
+    <div class="dropdown_menu">
+      <li><a href="Home">Home</a></li>
+      <li><a href="About">About</a></li>
+      <li><a href="Service">Service</a></li>
+      <li><a href="Contact">Contact</a></li>
+      <li> <a href="a" class="action_btn">Get Started</a></li>
+    </div>
+  </header>
+  <div id="clear"></div>
+  <br>
+  <img src="./img/Confira Já.png" alt="banner" class="img-banner">
+  <main>
+
+    <!--sessão serviços-->
+    <section class="services" id="services">
+      <div class="max-width">
+        <h2 class="title">Serviços</h2>
+        <div class="serv-content">
+          <div class="card">
+            <div class="box">
+              <ion-icon name="brush-outline"></ion-icon>
+              <div class="text">Web Design</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, optio. Rerum est atque obcaecati
+                aperiam!</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <ion-icon name="trending-up-outline"></ion-icon>
+              <div class="text">Anúncios</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, optio. Rerum est atque obcaecati
+                aperiam!</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <ion-icon name="code-outline"></ion-icon>
+              <div class="text">Design de Apps</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, optio. Rerum est atque obcaecati
+                aperiam!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+</body>
+
+</html>
